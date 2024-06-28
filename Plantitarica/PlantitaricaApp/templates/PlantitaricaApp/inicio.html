@@ -1,4 +1,4 @@
-{% load static %} 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/stylesBase.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
     <title>Inicio</title>
-    
 </head>
 <body>
     {% include "PlantitaricaApp/base.html" %}
+
     {% block content %}
-    <h1>este es el inicio</h1>
+    <h1>Este es el inicio</h1>
     
+    <div class="slideshow-container">
+        <!-- Imágenes del carrusel -->
+        <div class="mySlides fade">
+            <img src="{% static 'IMG/imagenn1.jpg' %}" style="width:100%">
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="{% static 'IMG/imagenn2.jpg' %}" style="width:100%">
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="{% static 'IMG/imagenn3.jpg' %}" style="width:100%">
+        </div>
+    
+        <!-- Controles del carrusel -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
     {% endblock %}
-       
+
+    {% block extra_scripts %}
+    <script src="{% static 'JS/carousel.js' %}"></script>
+    {% endblock %}
 </body>
 </html>

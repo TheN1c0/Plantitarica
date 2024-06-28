@@ -81,11 +81,3 @@ h1, h2, h3 {
   z-index: 0; /* Coloca el contenedor detrás de la barra de navegación */
 }
 
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background: #4caf50;
-  color: #fff;
-  width: 100%;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}

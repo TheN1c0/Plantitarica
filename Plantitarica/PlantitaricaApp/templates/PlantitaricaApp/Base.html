@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/stylesBase.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/mini-navbar.css' %}">
-    <title>Plantita Rica</title>
+    <title>{% block title %}Plantita Rica{% endblock %}</title>
 </head>
 <body>
     <nav class="nav">
@@ -32,8 +32,6 @@
         {% endblock %}
     </div>
 
-    <footer>
-        &copy; 2024 Plantita Rica. Todos los derechos reservados.
-    </footer> 
+
 </body>
 </html>
