@@ -5,21 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/stylesBase.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mini-navbar.css' %}">
     <title>Plantita Rica</title>
 </head>
 <body>
     <nav class="nav">
         <ul>
-            <li><a href="{% url 'inicio' %}">Inicio</a></li>
-            <li><a href="{% url 'Productos' %}">Productos</a></li>
-            <li><a href="{% url 'AcercaDe' %}">Acerca de</a></li>
-            <li><a href="{% url 'Contacto' %}">Contacto</a></li>
+            <li class="{% if request.resolver_match.url_name == 'inicio' %}active{% endif %}">
+                <a href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li class="{% if request.resolver_match.url_name == 'Productos' %}active{% endif %}">
+                <a href="{% url 'Productos' %}">Productos</a>
+            </li>
+            <li class="{% if request.resolver_match.url_name == 'AcercaDe' %}active{% endif %}">
+                <a href="{% url 'AcercaDe' %}">Acerca de</a>
+            </li>
+            <li class="{% if request.resolver_match.url_name == 'Contacto' %}active{% endif %}">
+                <a href="{% url 'Contacto' %}">Contacto</a>
+            </li>
         </ul>
     </nav>
     
     <div class="container">
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
 
     <footer>
@@ -27,4 +37,3 @@
     </footer> 
 </body>
 </html>
-

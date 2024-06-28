@@ -8,6 +8,16 @@
 <body>
     {% extends "PlantitaricaApp/base.html" %}
     {% block content %}
+    <nav class="mini-nav">
+        <ul>
+            
+            <li><a href="{% url 'Productos' %}">Plantas</a></li>
+            <li><a href="{% url 'Maceteros' %}">Maceteros</a></li>
+            <li><a href="{% url 'Insumos' %}">Insumos</a></li>
+            <li><a href="{% url 'agregar_insumos' %}">Agregar nuevo Insumo</a></li>
+        </ul>
+    </nav>
+    
     <h1>Agregar Insumos</h1>
     <form action="{% url 'btnAgregarInsumos' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}

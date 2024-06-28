@@ -6,30 +6,48 @@
 }
 
 /* Estilos generales */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(to bottom, #e0f7fa, #fff);
   color: #333;
-  padding: 20px;
+  padding-top: 80px;
   line-height: 1.6;
+  margin: 0;
 }
 
 h1, h2, h3 {
   color: #2e7d32; /* Verde oscuro */
 }
 
-/* Estilos del navegador */
+/* Estilos del navegador principal */
 .nav {
-  background-color: #4caf50; /* Verde */
-  padding: 10px 0;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  width: 100%;
+  background-color: #4caf50;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(234, 238, 236);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav li {
@@ -41,99 +59,33 @@ h1, h2, h3 {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
+  padding: 20px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
 .nav a:hover {
-  color: #c8e6c9; /* Verde claro */
+  background-color: #388e3c; /* Cambia el color de fondo al pasar el mouse */
 }
 
-.sub-nav {
-    background-color: #4caf50; /* Verde */
-    padding: 10px 0;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.nav .active a {
+  background-color: #388e3c; /* Color de fondo cuando está activo */
 }
 
-.sub-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
 
-.sub-nav li {
-    margin: 0 15px;
-}
-
-.sub-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-.sub-nav a:hover {
-    color: #c8e6c9; /* Verde claro */
-}
-
-/* Estilos del contenedor principal */
+/* Estilos del contenedor */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Asegura que el contenido no se superponga con la barra de navegación */
+  z-index: 0; /* Coloca el contenedor detrás de la barra de navegación */
 }
 
-/* Estilos de productos */
-.productos-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.producto {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 20px;
-  width: calc(33% - 40px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.producto:hover {
-  transform: scale(1.05);
-}
-
-.producto img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.producto-info {
-  padding: 10px 0;
-}
-
-.producto-info h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.producto-info p {
-  font-size: 1.2em;
-  color: #4caf50;
-}
-
-/* Estilos del pie de página */
 footer {
   text-align: center;
   padding: 10px 0;
   background: #4caf50;
   color: #fff;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }

@@ -1,1 +1,44 @@
+/* Estilos generales para productos */
+.productos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.producto {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(33% - 40px); /* Ajusta el ancho según tus necesidades */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    max-width: 100%;
+    max-height: 200px; /* Altura máxima deseada */
+    object-fit: cover; /* Recorte la imagen para que mantenga su relación de aspecto */
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Ajusta el borde según tus necesidades */
+}
+
+.producto-info {
+    text-align: center; /* Alinea el texto al centro */
+    padding: 10px; /* Ajusta el relleno según necesites */
+}
+
+.producto-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.producto-info p {
+    font-size: 1.2em;
+    color: #4caf50;
+}
