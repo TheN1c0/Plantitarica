@@ -11,17 +11,17 @@ def agregar_producto(request):
 	return render(request,'PlantitaricaApp/agregar_producto.html', context)
 
 def Productos(request):
-	Planta = Plantas.object.all()
+	Planta = Plantas.objects.all()
 	context={"Plantas":Planta}
 	return render(request,'PlantitaricaApp/Productos.html', context)
 
 def PMaceteros(request):
-	Macetero = Maceteros.object.all()
+	Macetero = Maceteros.objects.all()
 	context={"Maceteros":Macetero}
 	return render(request,'PlantitaricaApp/Maceteros.html', context)
 
 def PInsumos(request):
-	Insumo = Insumos.object.all()
+	Insumo = Insumos.objects.all()
 	context={"Insumos":Insumo}
 	return render(request,'PlantitaricaApp/Insumos.html', context)
 
