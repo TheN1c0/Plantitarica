@@ -10,6 +10,10 @@ def agregar_producto(request):
 	context={}
 	return render(request,'PlantitaricaApp/agregar_producto.html', context)
 
+def Productos(request):
+	context={}
+	return render(request,'PlantitaricaApp/Productos.html', context)
+
 
 def btnAgregarProduc(request):
     if request.method == 'POST':

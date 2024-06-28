@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Productos</h1>
+    <div class="container">
+        <h1>Productos</h1>
+        <a href="{% url 'agregar_producto' %}">Agregar Nuevo Producto</a>
+        <div class="productos-list">
+            {% for producto in Plantas %}
+            <div class="producto">
+                <img src="{{producto.foto.url}}" alt="{{ producto.descripcion }}">
+                <div class="producto-info">
+                    <h2>{{ producto.descripcion }}</h2>
+                    <p>Precio: ${{ producto.precio }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <p>No hay productos dispodibles.</p>
+            {% endfor %}
+        </div>
+    </div>
+
 </body>
 </html>
