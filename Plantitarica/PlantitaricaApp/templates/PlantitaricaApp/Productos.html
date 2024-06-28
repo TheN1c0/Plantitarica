@@ -6,9 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+    {% extends "PlantitaricaApp/base.html" %}
+    {% block content %}
+    <nav>
+        <ul>
+            <li><a href="{% url 'agregar_producto' %}">Agregar nuevo Producto</a></li>
+            <li><a href="{% url 'Productos' %}">Plantas</a></li>
+            <li><a href="{% url 'Maceteros' %}">Maceteros</a></li>
+            <li><a href="{% url 'Insumos' %}">Insumos</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h1>Productos</h1>
-        <a href="{% url 'agregar_producto' %}">Agregar Nuevo Producto</a>
+
         <div class="productos-list">
             {% for producto in Plantas %}
             <div class="producto">
@@ -23,6 +33,6 @@
             {% endfor %}
         </div>
     </div>
-
+    {% endblock %}
 </body>
 </html>

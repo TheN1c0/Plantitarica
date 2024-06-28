@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Navbar{% endblock %}</title>
-</head>
-<body>
-    <div>
-        <h1>aqui va a ir el navbar</h1>
-    </div>
 
-    {% block content %}
-    {% endblock %}
-</body>
-</html>
+<nav>
+    <ul>
+        <li><a href="{% url 'inicio' %}">Inicio</a></li>
+        <li><a href="{% url 'Productos' %}">Productos</a></li>
+        <li><a href="{% url 'AcercaDe' %}">Acerca de</a></li>
+        <li><a href="{% url 'Contacto' %}">Contacto</a></li>
+    </ul>
+</nav>
+
+{% block content %}
+{% endblock %}

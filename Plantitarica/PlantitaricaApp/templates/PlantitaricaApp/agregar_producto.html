@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    {% extends "PlantitaricaApp/base.html" %}
+    {% block content %}
     <h1>Agregar Productos</h1>
     <form action="{% url 'btnAgregarProduc' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -25,5 +27,6 @@
             <button type="submit">Guardar</button>
         </div>
     </form>
+    {% endblock %}
 </body>
 </html>

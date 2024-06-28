@@ -25,6 +25,13 @@ def PInsumos(request):
 	context={"Insumos":Insumo}
 	return render(request,'PlantitaricaApp/Insumos.html', context)
 
+def AcercaDe(request):
+	context={}
+	return render(request,'PlantitaricaApp/AcercaDe.html', context)
+
+def Contacto(request):
+	context={}
+	return render(request,'PlantitaricaApp/Contacto.html', context)
 
 def btnAgregarProduc(request):
     if request.method == 'POST':

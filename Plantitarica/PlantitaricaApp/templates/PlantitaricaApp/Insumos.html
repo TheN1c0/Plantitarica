@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+    {% extends "PlantitaricaApp/base.html" %}
+    {% block content %}
+    <nav>
+        <ul>
+            <li><a href="{% url 'agregar_producto' %}">Agregar nuevo Producto</a></li>
+            <li><a href="{% url 'Productos' %}">Plantas</a></li>
+            <li><a href="{% url 'Maceteros' %}">Maceteros</a></li>
+            <li><a href="{% url 'Insumos' %}">Insumos</a></li>
+        </ul>
+    </nav>
     <h1>Insumos</h1>
+    {% endblock %}
 </body>
 </html>
