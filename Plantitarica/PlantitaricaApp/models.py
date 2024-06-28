@@ -9,6 +9,8 @@ class Plantas(models.Model):
 
     def __str__(self):
         return str(self.nombre)
+    class Meta:
+        verbose_name_plural = "Plantas"
     
 class Maceteros(models.Model):
     id_Macetero = models.AutoField(db_column='idMacetero', primary_key=True) 
@@ -20,6 +22,9 @@ class Maceteros(models.Model):
     def __str__(self):
         return str(self.nombre)
     
+    class Meta:
+        verbose_name_plural = "Maceteros"
+    
 class Insumos(models.Model):
     id_Insumo  = models.AutoField(db_column='idInsumo', primary_key=True) 
     nombre = models.CharField(max_length=30)
@@ -29,7 +34,9 @@ class Insumos(models.Model):
 
     def __str__(self):
         return str(self.nombre)
-
+    
+    class Meta:
+        verbose_name_plural = "Insumos"
 
 
 class Clientes(models.Model):

@@ -1,12 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Plantita Rica</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'Productos' %}">Productos</a></li>
+            <li><a href="{% url 'AcercaDe' %}">Acerca de</a></li>
+            <li><a href="{% url 'Contacto' %}">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    {% block content %}
+    {% endblock %}
+    
+    <footer>
+        &copy; 2024 Plantita Rica. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
 
-<nav>
-    <ul>
-        <li><a href="{% url 'inicio' %}">Inicio</a></li>
-        <li><a href="{% url 'Productos' %}">Productos</a></li>
-        <li><a href="{% url 'AcercaDe' %}">Acerca de</a></li>
-        <li><a href="{% url 'Contacto' %}">Contacto</a></li>
-    </ul>
-</nav>
-
-{% block content %}
-{% endblock %}

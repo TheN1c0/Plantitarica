@@ -10,13 +10,29 @@
     {% block content %}
     <nav>
         <ul>
-            <li><a href="{% url 'agregar_producto' %}">Agregar nuevo Producto</a></li>
+            <li><a href="{% url 'agregar_maceteros' %}">Agregar nuevo Producto</a></li>
             <li><a href="{% url 'Productos' %}">Plantas</a></li>
             <li><a href="{% url 'Maceteros' %}">Maceteros</a></li>
             <li><a href="{% url 'Insumos' %}">Insumos</a></li>
         </ul>
     </nav>
-    <h1>Maceteros</h1>
+    <div class="container">
+        <h1>Maceteros</h1>
+
+        <div class="productos-list">
+            {% for producto in Maceteros %}
+            <div class="producto">
+                <img src="{{producto.foto.url}}" alt="{{ producto.descripcion }}">
+                <div class="producto-info">
+                    <h2>{{ producto.descripcion }}</h2>
+                    <p>Precio: ${{ producto.precio }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <p>No hay productos dispodibles.</p>
+            {% endfor %}
+        </div>
+    </div>
     {% endblock %}
 </body>
 </html>

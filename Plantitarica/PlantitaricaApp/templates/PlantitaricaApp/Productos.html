@@ -1,23 +1,26 @@
+{% extends "PlantitaricaApp/base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    {% extends "PlantitaricaApp/base.html" %}
+
     {% block content %}
     <nav>
         <ul>
-            <li><a href="{% url 'agregar_producto' %}">Agregar nuevo Producto</a></li>
+            <li><a href="{% url 'agregar_plantas' %}">Agregar nuevo Producto</a></li>
             <li><a href="{% url 'Productos' %}">Plantas</a></li>
             <li><a href="{% url 'Maceteros' %}">Maceteros</a></li>
             <li><a href="{% url 'Insumos' %}">Insumos</a></li>
         </ul>
     </nav>
     <div class="container">
-        <h1>Productos</h1>
+        <h1>Plantas</h1>
 
         <div class="productos-list">
             {% for producto in Plantas %}

@@ -8,12 +8,16 @@
 <body>
     {% extends "PlantitaricaApp/base.html" %}
     {% block content %}
-    <h1>Agregar Productos</h1>
-    <form action="{% url 'btnAgregarProduc' %}" method="post" enctype="multipart/form-data">
+    <h1>Agregar Insumos</h1>
+    <form action="{% url 'btnAgregarInsumos' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
             <label for="id_precio">Precio:</label>
             <input type="number" id="id_precio" name="precio" required>
+        </div>
+        <div class="form-group">
+            <label for="id_nombre">Nombre:</label>
+            <input type="text" id="id_nombre" name="Nombre" required>
         </div>
         <div class="form-group">
             <label for="id_descripcion">Descripción:</label>
