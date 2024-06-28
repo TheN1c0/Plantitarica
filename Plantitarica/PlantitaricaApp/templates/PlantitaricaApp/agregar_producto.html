@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Agregar Productos</h1>
+    <form action="{% url 'btnAgregarProduc' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_precio">Precio:</label>
+            <input type="number" id="id_precio" name="precio" required>
+        </div>
+        <div class="form-group">
+            <label for="id_descripcion">Descripción:</label>
+            <textarea id="id_descripcion" name="descripcion" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="id_foto">Foto:</label>
+            <input type="file" id="id_foto" name="foto" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+</body>
+</html>
