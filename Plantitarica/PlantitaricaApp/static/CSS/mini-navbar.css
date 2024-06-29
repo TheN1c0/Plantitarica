@@ -1,11 +1,17 @@
 /* Estilos para mini navbar */
 .mini-nav {
     background-color: #0e130c;
-    padding: 30px ;
-    margin-bottom: 20px;
+    padding: 15px 0; 
+    margin: 20px 0; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
     border-color: #0e130c;
+    width: 100%;
+    position: relative; 
+    top: 0; 
+    left: 0;
+    z-index: 1000; 
+   
+    background-color: #0e130c; 
 }
 
 .mini-nav ul {
@@ -13,6 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .mini-nav li {
@@ -35,4 +43,8 @@
 
 .mini-nav .active a {
     background-color: #227126;
+}
+
+body {
+    padding-top: 50px;
 }

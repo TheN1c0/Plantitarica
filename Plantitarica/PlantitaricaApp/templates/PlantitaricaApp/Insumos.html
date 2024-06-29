@@ -17,14 +17,15 @@
 <div class="container">
     <h1>Insumos</h1>
 
-    <div class="productos-list">
+    <div class="grid-container">
         {% for producto in Insumos %}
-        <div class="producto">
-            <img src="{{ producto.foto.url }}" alt="{{ producto.descripcion }}">
-            <div class="producto-info">
-                <h2>{{ producto.nombre }}</h2>
-                <p>{{ producto.descripcion }}</p>
-                <p>Precio: ${{ producto.precio }}</p>
+        <div class="card">
+            <img src="{{ producto.foto.url }}" class="card-img-top" alt="{{ producto.descripcion }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <p class="card-text">{{ producto.descripcion }}</p>
+                <p class="price">$ {{ producto.precio }}</p>
+                <a href="#" class="btn btn-primary">Añadir al carro</a>
             </div>
         </div>
         {% empty %}
@@ -32,4 +33,5 @@
         {% endfor %}
     </div>
 </div>
+
 {% endblock %}

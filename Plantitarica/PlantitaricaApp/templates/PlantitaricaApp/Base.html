@@ -11,8 +11,8 @@
     <title>{% block title %}Plantita Rica{% endblock %}</title>
 </head>
 <body>
-    <nav class="nav">
-        <img src="{% static 'IMG/logo.jpg' %}" alt="logo" id="logo">
+    <img src="{% static 'IMG/logo.jpg' %}" alt="logo" id="logo">
+    <nav class="nav">        
         <ul>
             <li class="{% if request.resolver_match.url_name == 'inicio' %}active{% endif %}">
                 <a href="{% url 'inicio' %}">Inicio</a>
