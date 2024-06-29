@@ -100,3 +100,15 @@ h1, h2, h3 {
   position: relative; /* Asegura que el contenido no se superponga con la barra de navegación */
   z-index: 0; /* Coloca el contenedor detrás de la barra de navegación */
 }
+
+.carro_oculto{
+  margin-left: 60%;
+  width: 39%;
+  color: #0E130C;
+  position: fixed;
+  top: 20;
+  right: 5;
+  background-color: rgb(255, 255, 255);
+  z-index: 9999; 
+  border: 1px black;
+}

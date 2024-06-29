@@ -25,9 +25,24 @@
                     <h5 class="card-title">{{ producto.nombre }}</h5>
                     <p class="card-text">{{ producto.descripcion }}</p>
                     <p class="price">$ {{ producto.precio }}</p>
-                    <a href="#" class="btn btn-primary">Añadir al carro</a>
+                    <form action="{% url 'registrarEnCarro' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group" style="display: none;" >
+                          <input type="text" id="id_precio" name="tipo" value="Plantas" >
+                        
+                        
+                            <input type="text" id="id_precio" name="nombre" value="{{ producto.nombre }}">
+                        
+                        
+                            <input type="number" id="id_nombre" name="precio" value="{{ producto.precio }}">
+                        
+                        
+                          <input type="text" id="id_nombre" name="pagina" value="Productos/">
+                        </div>
+                        <button type="submit" >Agregar al Carrito</button>
+                    </form>
                 </div>
-            </div>
+            </div >
         {% empty %}
         <p>No hay productos disponibles.</p>
         {% endfor %}

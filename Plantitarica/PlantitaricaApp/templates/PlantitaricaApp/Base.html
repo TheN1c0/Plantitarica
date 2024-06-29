@@ -12,31 +12,41 @@
     <title>{% block title %}Plantita Rica{% endblock %}</title>
 </head>
 <body>
-    <img src="{% static 'IMG/logo.jpg' %}" alt="logo" id="logo">
-    <nav class="nav">        
-        <ul>
-            <li class="{% if request.resolver_match.url_name == 'inicio' %}active{% endif %}">
-                <a href="{% url 'inicio' %}">Inicio</a>
-            </li>
-            <li class="{% if request.resolver_match.url_name == 'Productos' %}active{% endif %}">
-                <a href="{% url 'Productos' %}">Productos</a>
-            </li>
-            <li class="{% if request.resolver_match.url_name == 'AcercaDe' %}active{% endif %}">
-                <a href="{% url 'AcercaDe' %}">Acerca de</a>
-            </li>
-            <li class="{% if request.resolver_match.url_name == 'Contacto' %}active{% endif %}">
-                <a href="{% url 'Contacto' %}">Contacto</a>
-            </li>
-        </ul>
-        
-    </nav>
-    <img src="{% static 'IMG/carrito.png' %}" alt="carrito" id="carrito">
-    
-    <div class = "carro_oculto">
+    <div class = "carro_oculto" style="display: none;" >
+        {% for item in EnCarro %}
+        <form method="post" action="{% url 'eliminarEncarro' item.nombre %}" onsubmit="setAction(this)">
+            {% csrf_token %}
+            <p>Nombre: {{item.nombre}} Precio: {{item.precio}} </p> 
+            <input type="hidden" name="pagina_destino" id="pagina_destino">
+            <button type="submit" onclick="mostrarCarro()">X</button>
+        </form>
+        {% empty %}
+        {% endfor %}
     </div>
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
+    <img src="{% static 'IMG/logo.jpg' %}" alt="logo" id="logo">
+    <nav class="nav">        
+        <ul>
+            <li class="{% if request.resolver_match.url_name == 'inicio' %}active{% endif %}">
+                <a href="{% url 'inicio' %}" onclick="ocultarCarro()">Inicio</a>
+            </li>
+            <li class="{% if request.resolver_match.url_name == 'Productos' %}active{% endif %}">
+                <a href="{% url 'Productos' %}" onclick="ocultarCarro()">Productos</a>
+            </li>
+            <li class="{% if request.resolver_match.url_name == 'AcercaDe' %}active{% endif %}">
+                <a href="{% url 'AcercaDe' %}" onclick="ocultarCarro()">Acerca de</a>
+            </li>
+            <li class="{% if request.resolver_match.url_name == 'Contacto' %}active{% endif %}">
+                <a href="{% url 'Contacto' %}" onclick="ocultarCarro()">Contacto</a>
+            </li>
+        </ul>
+        
+    </nav>
+    <img src="{% static 'IMG/carrito.png' %}" alt="carrito" id="carrito" onclick="alternarCarro()">
+    
+    
 </body>
 </html>

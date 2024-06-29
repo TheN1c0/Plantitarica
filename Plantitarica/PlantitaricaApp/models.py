@@ -48,3 +48,9 @@ class Clientes(models.Model):
 
     def __str__(self):
         return str(self.nombre)
+    
+class EnCarro(models.Model):
+    tipo = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=100)
+    precio     = models.IntegerField(blank=False, null=False)
+
