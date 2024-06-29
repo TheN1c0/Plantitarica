@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/stylesBase.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/mini-navbar.css' %}">
+    
     <script src="{% static 'js/funciones.js' %}"></script>
     <title>{% block title %}Plantita Rica{% endblock %}</title>
 </head>
@@ -29,8 +30,10 @@
         </ul>
         
     </nav>
+    <img src="{% static 'IMG/carrito.png' %}" alt="carrito" id="carrito">
     
-    
+    <div class = "carro_oculto">
+    </div>
     <div class="container">
         {% block content %}
         {% endblock %}

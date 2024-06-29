@@ -13,9 +13,9 @@ html, body {
 }
 
 body {
-  background-color: #D4E9E2;
+
   background-attachment: fixed;
-  color: #333;
+  color: #ffffff;
   padding-top: 80px;
   line-height: 1.6;
   margin: 0;  
@@ -36,7 +36,15 @@ h1, h2, h3 {
   left: 10px;
   z-index: 1001;
 }
-
+#carrito {
+  height: auto;
+  width: auto;
+  max-width: 50px; 
+  position: fixed;
+  top: 10px; 
+  right: 10px;
+  z-index: 1001;
+}
 /* Estilos del navbar */
 .nav {
   display: flex;
@@ -78,10 +86,12 @@ h1, h2, h3 {
 
 
 .nav .active a {
-  background-color: #2c544a;
+  color: #54ad58;
 }
 
-
+.nav a:hover {
+  color: #54ad58;
+}
 
 /* Estilos del contenedor */
 .container {

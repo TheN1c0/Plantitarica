@@ -1,13 +1,17 @@
+{% extends "PlantitaricaApp/base.html" %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %} <!-- Agrega esta línea para cargar el módulo de etiquetas de static -->
+    <link rel="stylesheet" href="{% static 'css/agregar.css' %}">
     <title>Document</title>
 </head>
 <body>
-    {% extends "PlantitaricaApp/base.html" %}
-    {% block content %}
+<div class= fondo1>
+
     <nav class="mini-nav">
         <ul>
             <li id="plantas" class="{% if request.resolver_match.url_name == 'Productos' %}active{% endif %}">
@@ -41,6 +45,8 @@
             <button type="submit">Guardar</button>
         </div>
     </form>
+</div>
     {% endblock %}
+
 </body>
 </html>

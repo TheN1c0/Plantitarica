@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/stylesBase.css' %}">
     <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Inicio.css' %}">
     <title>Inicio</title>
 </head>
 <body>
     {% include "PlantitaricaApp/base.html" %}
 
     {% block content %}
-    <h1>Este es el inicio</h1>
+    
+    <div class = "text">
+        <h1>Bienvenido, <br>
+        a tu lugar <span>de confianza</span> <br>
+        <span>PlantitaRica</span></h1>
+        
+        <p>Nos alegra tenerte aquí. En nuestra tienda, encontrarás una amplia variedad de plantas que llenarán tu hogar de vida y frescura. Desde suculentas y cactus hasta hermosas flores y plantas de interior, tenemos todo lo que necesitas para crear tu propio oasis verde.</p>
+        
+    </div>
     
     <div class="slideshow-container">
         <!-- Imágenes del carrusel -->

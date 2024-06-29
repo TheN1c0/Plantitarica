@@ -10,8 +10,6 @@
     top: 0; 
     left: 0;
     z-index: 1000; 
-   
-    background-color: #0e130c; 
 }
 
 .mini-nav ul {
@@ -38,11 +36,11 @@
 }
 
 .mini-nav a:hover {
-    background-color: #54ad58;
+    color: #54ad58;
 }
 
 .mini-nav .active a {
-    background-color: #227126;
+    color: #54ad58;
 }
 
 body {
