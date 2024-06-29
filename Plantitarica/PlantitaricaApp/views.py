@@ -3,8 +3,9 @@ from .forms import PlantasForm, MaceterosForm, InsumosForm
 from .models import Plantas, Maceteros, Insumos, Clientes, EnCarro
 # Create your views here.
 def inicio(request):
-	context={}
-	return render(request,'PlantitaricaApp/inicio.html', context)
+    v_encarro = EnCarro.objects.all()
+    context={"EnCarro": v_encarro}
+    return render(request,'PlantitaricaApp/inicio.html', context)
 
 def agregar_plantas(request):
 	context={}
