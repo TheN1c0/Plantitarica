@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
 }
 
 /* Estilos generales */
@@ -15,10 +16,10 @@ html, body {
 body {
 
   background-attachment: fixed;
-  color: #ffffff;
   padding-top: 80px;
   line-height: 1.6;
   margin: 0;  
+
 }
 
 
@@ -68,14 +69,15 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
+  color: #F0EDCE;
+} 
 
 .nav li {
   margin: 0 15px;
 }
 
 .nav a {
-  color: #fff;
+  color: #F0EDCE;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
@@ -90,7 +92,7 @@ h1, h2, h3 {
 }
 
 .nav a:hover {
-  color: #54ad58;
+  color: #B4CE02;
 }
 
 /* Estilos del contenedor */

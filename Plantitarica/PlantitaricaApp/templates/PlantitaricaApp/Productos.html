@@ -17,31 +17,29 @@
 <div class="container">
     <h1>Plantas</h1>
 
-    <div class="grid-container">
-            {% for producto in Plantas %}
-            <div class="card">
-                <img src="{{ producto.foto.url }}" class="card-img-top" alt="{{ producto.descripcion }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ producto.nombre }}</h5>
-                    <p class="card-text">{{ producto.descripcion }}</p>
-                    <p class="price">$ {{ producto.precio }}</p>
-                    <form action="{% url 'registrarEnCarro' %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-group" style="display: none;" >
-                          <input type="text" id="id_precio" name="tipo" value="Plantas" >
-                            <input type="text" id="id_precio" name="nombre" value="{{ producto.nombre }}">
-                            <input type="number" id="id_nombre" name="precio" value="{{ producto.precio }}">
-                          <input type="text" id="id_nombre" name="pagina" value="Productos/">
-                        </div>
-                        <button type="submit" >Agregar al Carrito</button>
-                    </form>
-                </div>
-            </div >
+    <div class="grid-container plantas-grid">
+        {% for producto in Plantas %}
+        <div class="card">
+            <img src="{{ producto.foto.url }}" class="card-img-top" alt="{{ producto.descripcion }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <p class="card-text">{{ producto.descripcion }}</p>
+                <p class="price">$ {{ producto.precio }}</p>
+                <form action="{% url 'registrarEnCarro' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group" style="display: none;">
+                        <input type="text" id="id_precio" name="tipo" value="Plantas">
+                        <input type="text" id="id_precio" name="nombre" value="{{ producto.nombre }}">
+                        <input type="number" id="id_nombre" name="precio" value="{{ producto.precio }}">
+                        <input type="text" id="id_nombre" name="pagina" value="Productos/">
+                    </div>
+                    <button type="submit">Agregar al Carrito</button>
+                </form>
+            </div>
+        </div>
         {% empty %}
         <p>No hay productos disponibles.</p>
         {% endfor %}
     </div>
 </div>
-
-
 {% endblock %}

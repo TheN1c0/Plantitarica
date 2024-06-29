@@ -1,0 +1,22 @@
+body{
+    background-color: #F0EDCE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  html, body {
+    height: 100%;
+    width: 100%;
+    padding-top: 0px;
+  }
+
+  .grid-container {
+    padding: 30px;
+    margin: 30px auto; 
+    background-color: red
+}

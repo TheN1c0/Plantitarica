@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: #0E130C;
+    background-color: #20433D;
 }
 .text{
     
@@ -24,17 +24,17 @@ body{
 
 .text h1{
     font-size: 45px;
-    color: #ffffff;
+    color: #F0EDCE;
 
 }
 .text span{
-    color: #9a3db9;
+    color: #B4CE02;
 }
 
 .text p{
     margin: 20px 0;
     line-height: 25px;
-    color: #ffffff;
+    color: #F0EDCE;
 }
 
 .slideshow-container {
@@ -53,3 +53,14 @@ body{
     clear: both;
 }
 
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #F0EDCE;
+    color: #0E130C;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Mantén el footer fijo en la parte inferior */
+    bottom: 0; /* Lo coloca al final de la ventana del navegador */
+    z-index: 999; /* Asegura que el footer esté por encima de otros contenidos */
+  }
