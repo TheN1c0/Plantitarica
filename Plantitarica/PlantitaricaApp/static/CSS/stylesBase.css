@@ -13,11 +13,11 @@ html, body {
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #e0f7fa, #fff);
+  background-color: #000000;
   color: #333;
   padding-top: 80px;
   line-height: 1.6;
-  margin: 0;
+  margin: 0;  
 }
 
 h1, h2, h3 {
@@ -27,16 +27,16 @@ h1, h2, h3 {
 /* Estilos del navegador principal */
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 0 20px;
   width: 100%;
-  background-color: #4caf50;
+  background-color: #0e130c;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(234, 238, 236);
+  border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -48,6 +48,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .nav li {
@@ -65,13 +66,20 @@ h1, h2, h3 {
 }
 
 .nav a:hover {
-  background-color: #388e3c; /* Cambia el color de fondo al pasar el mouse */
+  background-color: #54ad58;
 }
 
 .nav .active a {
-  background-color: #388e3c; /* Color de fondo cuando está activo */
+  background-color: #227126;
 }
 
+/* Estilos para la imagen del logo */
+#logo {
+  height: auto; /* Ajusta esta altura según sea necesario */
+  width: auto; /* Mantiene la proporción de la imagen */
+  max-width: 100px; /* Máximo ancho opcional para evitar que se extienda demasiado */
+ /* Centra la imagen horizontalmente */
+}
 
 /* Estilos del contenedor */
 .container {
@@ -80,4 +88,3 @@ h1, h2, h3 {
   position: relative; /* Asegura que el contenido no se superponga con la barra de navegación */
   z-index: 0; /* Coloca el contenedor detrás de la barra de navegación */
 }
-

@@ -3,10 +3,14 @@
 {% block content %}
 <nav class="mini-nav">
     <ul>
-        <li><a href="{% url 'Productos' %}">Plantas</a></li>
-        <li><a href="{% url 'Maceteros' %}">Maceteros</a></li>
-        <li><a href="{% url 'Insumos' %}">Insumos</a></li>
-        <li><a href="{% url 'agregar_plantas' %}">Agregar nueva Planta</a></li>
+        <li id="plantas" class="{% if request.resolver_match.url_name == 'Productos' %}active{% endif %}">
+            <a href="{% url 'Productos' %}">Plantas</a></li>
+        <li id="maceteros" class="{% if request.resolver_match.url_name == 'Maceteros' %}active{% endif %}">
+            <a href="{% url 'Maceteros' %}">Maceteros</a></li>
+        <li id="insumos" class="{% if request.resolver_match.url_name == 'Insumos' %}active{% endif %}">
+            <a href="{% url 'Insumos' %}">Insumos</a></li>
+        <li id="agregar_plantas" class="{% if request.resolver_match.url_name == 'agregar_plantas' %}active{% endif %}">
+            <a href="{% url 'agregar_plantas' %}">Agregar nueva Planta</a></li>
     </ul>
 </nav>
 
@@ -16,11 +20,13 @@
     <div class="productos-list">
         {% for producto in Plantas %}
         <div class="producto">
-            <img src="{{ producto.foto.url }}" alt="{{ producto.descripcion }}">
+            <div class="producto-imagen">
+                <img src="{{ producto.foto.url }}" alt="{{ producto.descripcion }}">
+            </div>
             <div class="producto-info">
                 <h2>{{ producto.nombre }}</h2>
-                <p>{{ producto.descripcion }}</p>
                 <p>Precio: ${{ producto.precio }}</p>
+                <p>{{ producto.descripcion }}</p>
             </div>
         </div>
         {% empty %}
@@ -28,4 +34,6 @@
         {% endfor %}
     </div>
 </div>
+
+
 {% endblock %}
