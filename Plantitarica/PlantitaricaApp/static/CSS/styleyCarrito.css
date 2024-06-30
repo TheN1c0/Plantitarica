@@ -1,4 +1,4 @@
-/* Estilo para el contenedor oculto del carrito */
+
 #carroOculto {
     display: none;
     padding: 20px;
@@ -8,14 +8,14 @@
     margin-top: 20px;
 }
 
-/* Estilo para cada detalle del artículo en el carrito */
+
 #carroOculto .itemDetalle {
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
 }
 
-/* Estilo para el formulario de cada artículo */
+
 #carroOculto form {
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     margin-bottom: 10px;
 }
 
-/* Estilo para el botón de eliminar */
+
 #carroOculto .eliminarBoton {
     background-color: #e74c3c;
     color: #fff;

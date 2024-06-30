@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: 'poppins', sans-serif;
 }
 
-/* Estilos generales */
+
 html, body {
   height: 100%;
   width: 100%;
@@ -24,10 +24,10 @@ body {
 
 
 h1, h2, h3 {
-  color: #2e7d32; /* Verde oscuro */
+  color: #2e7d32; 
 }
 
-/* Estilos del navegador principal */
+
 #logo {
   height: auto;
   width: auto;
@@ -46,7 +46,7 @@ h1, h2, h3 {
   right: 10px;
   z-index: 1001;
 }
-/* Estilos del navbar */
+
 .nav {
   display: flex;
   justify-content: center;
@@ -95,12 +95,12 @@ h1, h2, h3 {
   color: #B4CE02;
 }
 
-/* Estilos del contenedor */
+
 .container {
   width: 100%;
   padding: 20px;
-  position: relative; /* Asegura que el contenido no se superponga con la barra de navegación */
-  z-index: 0; /* Coloca el contenedor detrás de la barra de navegación */
+  position: relative; 
+  z-index: 0; 
 }
 
 .carro_oculto{

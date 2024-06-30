@@ -2,7 +2,7 @@
 
 
 
-/* Estilo para el título del formulario */
+
 #formTitulo {
     font-size: 28px;
     color: #2c3e50;
@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-/* Estilo para el formulario */
+
 #formAgregarProducto {
     max-width: 600px;
     margin: 0 auto;
@@ -20,12 +20,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para cada grupo de formulario */
+
 #formAgregarProducto .form-group {
     margin-bottom: 20px;
 }
 
-/* Estilo para las etiquetas */
+
 #formAgregarProducto label {
     display: block;
     margin-bottom: 8px;
@@ -33,7 +33,7 @@
     color: #000000;
 }
 
-/* Estilo para los campos de entrada */
+
 #formAgregarProducto input[type="number"],
 #formAgregarProducto input[type="text"],
 #formAgregarProducto input[type="file"] {
@@ -52,7 +52,7 @@
     border-color: #3498db;
 }
 
-/* Estilo para el botón de guardar */
+
 #grupoBoton {
     text-align: center;
 }
@@ -68,12 +68,12 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Estilo para el botón al pasar el cursor por encima */
+
 #botonGuardar:hover {
     background-color: #c0392b;
 }
 
-/* Estilo para el botón al hacer clic */
+
 #botonGuardar:active {
     background-color: #a93226;
     transform: scale(0.95);

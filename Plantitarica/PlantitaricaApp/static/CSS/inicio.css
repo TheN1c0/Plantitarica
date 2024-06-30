@@ -1,47 +1,61 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+
 .text, .text2 {
     width: 100%;
-    margin-bottom: 20px; /* Para agregar espacio entre .text y .text2 */
+    margin-bottom: 20px; 
 }
 
-body{
+body {
     background-color: #20433D;
+    height: 100vh;
 }
-.text{
-    
+
+.text {
     float: left;
     width: 50%;
-    
     top: 25%;
     flex: 1;
     margin-left: 80px;
+    margin-bottom: -10%; 
 }
 
-.text h1{
+.text h1 {
     font-size: 45px;
     color: #F0EDCE;
-
 }
-.text span{
+
+.text span {
     color: #B4CE02;
 }
 
-.text p{
+.text p {
     margin: 20px 0;
     line-height: 25px;
     color: #F0EDCE;
 }
 
 .slideshow-container {
+    margin-top: 3%;
     float: right;
-    width: 50%; 
+    width: 50%;
     margin-right: 80px;
+    position: relative;
+    overflow: hidden; 
+    height: 550px;
+    border-radius: 10px;
 }
+
+.mySlides img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
 .content-container {
     display: flex;
     align-items: flex-start;
@@ -60,7 +74,8 @@ footer {
     color: #0E130C;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Mantén el footer fijo en la parte inferior */
-    bottom: 0; /* Lo coloca al final de la ventana del navegador */
-    z-index: 999; /* Asegura que el footer esté por encima de otros contenidos */
-  }
+    position: fixed; 
+    bottom: 0; 
+    z-index: 1001; 
+    margin-top: 20px; 
+}

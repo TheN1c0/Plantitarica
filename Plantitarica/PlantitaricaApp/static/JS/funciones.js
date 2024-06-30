@@ -1,4 +1,4 @@
-    //agregar la clase 'active' al elemento clickeado y quitarla de los demás
+
     var elementosNavbar = document.querySelectorAll('.mini-nav ul li');
     elementosNavbar.forEach(function(elemento) {
         elemento.addEventListener('click', function() {
@@ -20,7 +20,7 @@ function alternarCarro() {
     var elementos = document.getElementsByClassName('carro_oculto');
     for (var i = 0; i < elementos.length; i++) {
         if (elementos[i].style.display === 'none' || elementos[i].style.display === '') {
-            elementos[i].style.display = 'block'; // Asegúrate de que este display se ajuste a tu layout
+            elementos[i].style.display = 'block'; 
         } else {
             elementos[i].style.display = 'none';
         }
@@ -30,7 +30,7 @@ function alternarCarro() {
 function mostrarCarro() {
     var elementos = document.getElementsByClassName('carro_oculto');
     for (var i = 0; i < elementos.length; i++) {
-        elementos[i].style.display = 'block'; // Cambia 'block' a 'flex' o 'grid' según tu layout
+        elementos[i].style.display = 'block'; 
     }
 }
 function ocultarCarro() {

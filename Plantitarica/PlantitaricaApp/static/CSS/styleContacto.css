@@ -1,4 +1,4 @@
-/* Estilo para el contenedor de la página de contacto */
+
 #contactContainer {
     background-color: #f7f7f7;
     padding: 40px;
@@ -9,20 +9,20 @@
     text-align: center;
 }
 
-/* Estilo para el título de la página de contacto */
+
 #contactTitulo {
     font-size: 32px;
     color: #2c3e50;
     margin-bottom: 20px;
 }
 
-/* Estilo para el formulario de contacto */
+
 #contactForm {
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Estilo para cada grupo de formulario */
+
 #contactForm .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -32,7 +32,7 @@
     text-align: center;
 }
 
-/* Estilo para las etiquetas */
+
 #contactForm label {
     display: block;
     margin-bottom: 8px;
@@ -40,7 +40,7 @@
     color: #000000;
 }
 
-/* Estilo para los campos de entrada */
+
 #contactForm input[type="text"],
 #contactForm input[type="email"],
 #contactForm textarea {
@@ -53,14 +53,13 @@
     transition: border-color 0.3s ease;
 }
 
-/* Estilo para los campos de entrada al recibir foco */
 #contactForm input[type="text"]:focus,
 #contactForm input[type="email"]:focus,
 #contactForm textarea:focus {
     border-color: #3498db;
 }
 
-/* Estilo para el botón de enviar */
+
 #contactForm #botonEnviar {
     background-color: #e74c3c;
     color: #fff;
@@ -72,12 +71,12 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Estilo para el botón al pasar el cursor por encima */
+
 #contactForm #botonEnviar:hover {
     background-color: #c0392b;
 }
 
-/* Estilo para el botón al hacer clic */
+
 #contactForm #botonEnviar:active {
     background-color: #a93226;
     transform: scale(0.95);

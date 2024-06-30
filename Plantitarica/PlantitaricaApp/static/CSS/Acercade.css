@@ -23,7 +23,7 @@ body{
 
 #foto2 {
     width: 200px; 
-    height: 60%; /* Ajusta esta altura según tus necesidades */
+    height: 60%; 
     top: 22%; 
     right: 10%;
     z-index: 1001;
@@ -33,7 +33,7 @@ body{
 }
 #foto1 {
     width: 200px; 
-    height: 60%; /* Ajusta esta altura según tus necesidades */
+    height: 60%; 
 
     top: 22%; 
     right: 10%;
@@ -79,7 +79,7 @@ footer {
     color: #fff;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Mantén el footer fijo en la parte inferior */
-    bottom: 0; /* Lo coloca al final de la ventana del navegador */
-    z-index: 999; /* Asegura que el footer esté por encima de otros contenidos */
+    position: fixed; 
+    bottom: 0; 
+    z-index: 999; 
   }
