@@ -15,33 +15,68 @@
 </nav>
 
 <div class="container">
-    <h1>Plantas</h1>
+    <div class = "grid-background">
+        <h1>Plantas</h1>
 
-        <div class="grid-container">
-                {% for producto in Plantas %}
-                <div class="card">
-                    <img src="{{ producto.foto.url }}" class="card-img-top" alt="{{ producto.descripcion }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <p class="price">$ {{ producto.precio }}</p>
-                        <form action="{% url 'registrarEnCarro' %}" method="POST">
-                            {% csrf_token %}
-                            <div class="form-group" style="display: none;" >
-                            <input type="text" id="id_precio" name="tipo" value="Plantas" >
-                                <input type="text" id="id_precio" name="nombre" value="{{ producto.nombre }}">
-                                <input type="number" id="id_nombre" name="precio" value="{{ producto.precio }}">
-                            <input type="text" id="id_nombre" name="pagina" value="Productos/">
-                            </div>
-                            <button type="submit" >Agregar al Carrito</button>
-                        </form>
-                    </div>
-                </div >
-            {% empty %}
-            <p>No hay productos disponibles.</p>
-            {% endfor %}
-        </div>
+            <div class="grid-container">
+                    {% for producto in Plantas %}
+                    <div class="card">
+                        <img src="{{ producto.foto.url }}" class="card-img-top" alt="{{ producto.descripcion }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                            <p class="price">$ {{ producto.precio }}</p>
+                            <form action="{% url 'registrarEnCarro' %}" method="POST">
+                                {% csrf_token %}
+                                <div class="form-group" style="display: none;" >
+                                <input type="text" id="id_precio" name="tipo" value="Plantas" >
+                                    <input type="text" id="id_precio" name="nombre" value="{{ producto.nombre }}">
+                                    <input type="number" id="id_nombre" name="precio" value="{{ producto.precio }}">
+                                <input type="text" id="id_nombre" name="pagina" value="Productos/">
+                                </div>
+                                <button type="submit" >Agregar al Carrito</button>
+                            </form>
+                        </div>
+                    </div >
+                {% empty %}
+                <p>No hay productos disponibles.</p>
+                {% endfor %}
+            </div>
+    </div>
 </div>
+<footer>
+    &copy; 2024 Plantita Rica. Todos los derechos reservados.
+</footer>
 
+{% endblock %}
+{% block extra_scripts %}
+<script>
+    let lastScrollTop = 0;
+    const footer = document.querySelector('footer');
 
+    document.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Mostrar el footer solo si llegas al final de la página
+        if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+            footer.style.opacity = '1';
+            footer.style.visibility = 'visible';
+            footer.style.transition = 'opacity 0.3s ease-in-out, visibility 0.3s ease-in-out';
+        } else {
+            footer.style.opacity = '0';
+            footer.style.visibility = 'hidden';
+        }
+
+        // Ocultar el footer cuando haces scroll hacia arriba
+        if (scrollTop > lastScrollTop && (window.innerHeight + window.scrollY) < document.body.scrollHeight) {
+            footer.style.opacity = '0';
+            footer.style.visibility = 'hidden';
+        } else {
+            footer.style.opacity = '1';
+            footer.style.visibility = 'visible';
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para que no pase de 0
+    });
+</script>
 {% endblock %}

@@ -15,6 +15,7 @@
 </nav>
 
 <div class="container">
+    <div class = "grid-background">
     <h1>Maceteros</h1>
     <div class="grid-container">
         {% for producto in Maceteros %}
@@ -40,6 +41,7 @@
         {% empty %}
         <p>No hay productos disponibles.</p>
         {% endfor %}
+    </div>
     </div>
 </div>
 {% endblock %}

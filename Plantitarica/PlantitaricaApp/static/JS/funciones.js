@@ -9,7 +9,7 @@
         });
     });
     
-s
+
 
 function setAction(form) {
     var currentPage = window.location.href;
@@ -39,3 +39,4 @@ function ocultarCarro() {
         elementos[i].style.display = 'none';
     }
 }
+

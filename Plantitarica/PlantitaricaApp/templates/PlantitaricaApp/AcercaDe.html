@@ -4,14 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/stylesBase.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Acercade.css' %}">
+    <title>Sobre Nosotros</title>
+
 </head>
 <body>
     {% include "PlantitaricaApp/base.html" %}
     {% block content %}
-    <h1>Pagina acerca de</h1>
+    <div class="contenedor-padre">
+        <div>
+            <img src="{% static 'IMG/imagenn3.jpg' %}" alt="foto2" id="foto2">
+        </div>
+        <div class = "text">
+            <h1>Sobre <span>Nosotros</span></h1>
+                <p>
+                    Nuestra misión es inspirar y guiar a entusiastas de todas las edades y niveles de experiencia a descubrir el maravilloso mundo de la jardinería. Creemos que cada planta tiene una historia que contar y un beneficio que aportar, ya sea mejorando la calidad del aire, embelleciendo un espacio o proporcionando un toque de tranquilidad. Además de nuestra variedad de plantas, ofrecemos distintos recursos como maceteros o insumos, para garantizar que tanto principiantes como jardineros experimentados puedan cultivar y disfrutar de su propio jardín. <br>
+                    <h2>
+                        ¡Te invitamos a explorar nuestros productos aquí y a acompañarnos en este viaje verde para descubrir cómo las plantas pueden enriquecer tu hogar y tu vida!
+                    </h2>
+                </p>
+        </div>
+        <div class = "foto1">
+            <img src="{% static 'IMG/imagenn1.jpg' %}" alt="foto1" id="foto1">
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Plantita Rica. Todos los derechos reservados.
+    </footer>
     {% endblock %}
 </body>
 </html>

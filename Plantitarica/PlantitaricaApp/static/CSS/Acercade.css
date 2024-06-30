@@ -1,0 +1,85 @@
+
+html, body{
+    margin: 0;
+    height: 100%;
+
+}
+body{
+    background-color: #ffffff;
+}
+.contenedor-padre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    background-color: #F0EDCE;
+    padding: 30px; 
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#foto2 {
+    width: 200px; 
+    height: 60%; /* Ajusta esta altura según tus necesidades */
+    top: 22%; 
+    right: 10%;
+    z-index: 1001;
+    object-fit: cover;
+    border-radius: 10px;
+    clip-path: inset(0 0 0 1px); 
+}
+#foto1 {
+    width: 200px; 
+    height: 60%; /* Ajusta esta altura según tus necesidades */
+
+    top: 22%; 
+    right: 10%;
+    z-index: 1001;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.text{
+    background-color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    height: 70%;
+    margin: auto;
+    text-align: justify;
+    padding: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.text h1{
+    font-size: 30px;    
+    color: #0E130C;
+    font-weight: bold;
+}
+.text h2{
+    font-size: medium;
+    color: green;
+    font-weight: bold;
+
+}
+.text span {
+    font-size: 30px;
+    color: green;
+}
+.text p{
+    color: #0E130C;
+    font-weight: normal;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4caf50;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Mantén el footer fijo en la parte inferior */
+    bottom: 0; /* Lo coloca al final de la ventana del navegador */
+    z-index: 999; /* Asegura que el footer esté por encima de otros contenidos */
+  }
