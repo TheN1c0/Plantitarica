@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="{% static 'css/stylesBase.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/mini-navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleyCarrito.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleboton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleform.css' %}">
     
     <script src="{% static 'js/funciones.js' %}"></script>
     <title>{% block title %}Plantita Rica{% endblock %}</title>
 </head>
 <body>
-    <div class = "carro_oculto" style="display: none;" >
+    <div class="carro_oculto" id="carroOculto" style="display: none;">
         {% for item in EnCarro %}
-        <form method="post" action="{% url 'eliminarEncarro' item.nombre %}" onsubmit="setAction(this)">
+        <form method="post" action="{% url 'eliminarEncarro' item.nombre %}" onsubmit="setAction(this)" id="formCarro{{ forloop.counter }}">
             {% csrf_token %}
-            <p>Nombre: {{item.nombre}} Precio: {{item.precio}} </p> 
+            <p class="itemDetalle">Nombre: {{item.nombre}} <br> Precio: {{item.precio}}</p>
             <input type="hidden" name="pagina_destino" id="pagina_destino">
-            <button type="submit" onclick="mostrarCarro()">X</button>
+            <button type="submit" class="eliminarBoton" onclick="mostrarCarro()">X</button>
         </form>
         {% empty %}
         {% endfor %}
     </div>
+    
     <div class="container">
         {% block content %}
         {% endblock %}
