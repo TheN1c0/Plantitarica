@@ -15,13 +15,17 @@ body {
     height: 100vh;
 }
 
+/*20433D*/
+
 .text {
     float: left;
     width: 50%;
+    height: 50%;
     top: 25%;
     flex: 1;
     margin-left: 80px;
     margin-bottom: -10%; 
+    
 }
 
 .text h1 {
@@ -43,7 +47,7 @@ body {
     margin-top: 3%;
     float: right;
     width: 50%;
-    margin-right: 80px;
+    margin-right: 10%;
     position: relative;
     overflow: hidden; 
     height: 550px;
@@ -78,4 +82,35 @@ footer {
     bottom: 0; 
     z-index: 1001; 
     margin-top: 20px; 
+}
+
+#ContInicio1{
+    background-color: #20433d;
+    height: 100%;
+}
+
+.ContenedorMain{
+   
+   
+}
+
+#ContInicio2{
+    position: absolute;
+    top: 97%;
+    width: 100%;
+    display: inline;
+    background-color: white;
+}
+
+.NewCont {
+    text-align: center; 
+}
+
+.cate{
+    margin-top: 3%;
+    display: inline-block; 
+    background-color: rgba(224, 224, 217, 0.438);
+    padding: 2%;
+    border-radius: 15px;
+           
 }

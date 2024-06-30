@@ -51,7 +51,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 20px;
+  padding: 1%;
   width: 100%;
   background-color: #0E130C;
   border-width: 1px;

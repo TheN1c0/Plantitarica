@@ -14,33 +14,47 @@
     {% include "PlantitaricaApp/base.html" %}
 
     {% block content %}
-    
-    <div class = "text">
-        <h1>Bienvenido, <br>
-        a tu lugar de <span>confianza</span> <br>
-        <span>PlantitaRica</span></h1>
-        
-        <p>Nos alegra tenerte aquí. En nuestra tienda, encontrarás una amplia variedad de plantas que llenarán tu hogar de vida y frescura. Desde suculentas y cactus hasta hermosas flores y plantas de interior, tenemos todo lo que necesitas para crear tu propio oasis verde.</p>
-        
+    <div class="ContenedorMain">
+        <div class="NewConteiner" id="ContInicio1">   
+            <div class = "text">
+                <h1>Bienvenido <br>
+                a tu lugar de <span>confianza</span> <br>
+                <span>PlantitaRica</span></h1>
+                
+                <p>Nos alegra tenerte aquí. En nuestra tienda, encontrarás una amplia variedad de plantas que llenarán tu hogar de vida y frescura. Desde suculentas y cactus hasta hermosas flores y plantas de interior, tenemos todo lo que necesitas para crear tu propio oasis verde.</p>
+                
+            </div>
+            
+            <div class="slideshow-container">
+                <!-- Imágenes del carrusel -->
+                <div class="mySlides fade">
+                    <img src="{% static 'IMG/1.png' %}" alt="Imagen 1">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="{% static 'IMG/2.png' %}" alt="Imagen 2">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="{% static 'IMG/3.png' %}" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
+        <div class="NewCont" id="ContInicio2">
+            <div class="cate" id="minitineda">
+                <h1>Plantas</h1>
+                <img src="{% static 'IMG/Shelby.png' %}" alt="Plant 1">
+            </div>
+            <div class="cate" id="minitineda">
+                <h1>Maceteros</h1>
+                <img src="{% static 'IMG/DanesLGris.png' %}" alt="Macet 1">
+            </div>
+            <div class="cate" id="minitineda">
+                <h1>Insumos</h1>
+                <img src="{% static 'IMG/KitFumagina.png' %}" alt="Ins 1">
+            </div>
+        </div>
     </div>
-    
-<div class="slideshow-container">
-    <!-- Imágenes del carrusel -->
-    <div class="mySlides fade">
-        <img src="{% static 'IMG/1.png' %}" alt="Imagen 1">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="{% static 'IMG/2.png' %}" alt="Imagen 2">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="{% static 'IMG/3.png' %}" alt="Imagen 3">
-    </div>
-
-
-
-</div>
     <footer>
         &copy; 2024 Plantita Rica. Todos los derechos reservados.
     </footer>
