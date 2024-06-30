@@ -53,24 +53,20 @@ def Contacto(request):
     return render(request,'PlantitaricaApp/Contacto.html', context)
 
 def btnAgregarPlantas(request):
-    if request.method == 'POST':
-        form = PlantasForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('Productos')
-        else:
-            form = PlantasForm()
-        return render(request, 'plantitaricaApp/agregar_producto.html', {'form': form})
+    precio = request.POST['precio']
+    nombre = request.POST['Nombre']
+    foto = request.FILES['foto']
+    nuevo_servicio = Plantas(precio=precio, nombre=nombre, foto=foto)
+    nuevo_servicio.save()
+    return render(request, 'plantitaricaApp/agregar_plantas.html')
 
 def btnAgregarMaceteros(request):
-    if request.method == 'POST':
-        form = MaceterosForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('Productos')
-        else:
-            form = MaceterosForm()
-        return render(request, 'plantitaricaApp/agregar_producto.html', {'form': form})
+    precio = request.POST['precio']
+    nombre = request.POST['Nombre']
+    foto = request.FILES['foto']
+    nuevo_servicio = Maceteros(precio=precio, nombre=nombre, foto=foto)
+    nuevo_servicio.save()
+    return render(request, 'plantitaricaApp/agregar_maceteros.html' )
     
 def btnAgregarInsumos(request):
     precio = request.POST['iprecio']
