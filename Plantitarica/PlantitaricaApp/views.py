@@ -73,14 +73,12 @@ def btnAgregarMaceteros(request):
         return render(request, 'plantitaricaApp/agregar_producto.html', {'form': form})
     
 def btnAgregarInsumos(request):
-    if request.method == 'POST':
-        form = InsumosForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('Productos')
-        else:
-            form = InsumosForm()
-        return render(request, 'plantitaricaApp/agregar_producto.html', {'form': form})
+    precio = request.POST['iprecio']
+    nombre = request.POST['inombre']
+    foto = request.FILES['ifoto']
+    nuevo_servicio = Insumos(precio=precio, nombre=nombre, foto=foto)
+    nuevo_servicio.save()
+    return render(request, 'plantitaricaApp/agregar_insumos.html')
 
 def registrarEnCarro(request):
     tipo = request.POST['tipo']
