@@ -25,27 +25,27 @@
         </ul>
     </nav>
     
-    
-    <h1 id="formTitulo">Agregar Productos</h1>
-    <form action="{% url 'btnAgregarPlantas' %}" method="post" enctype="multipart/form-data" id="formAgregarProducto">
-        {% csrf_token %}
-        <div class="form-group" id="grupoPrecio">
-            <label for="id_precio">Precio:</label>
-            <input type="number" id="id_precio" name="precio" required>
-        </div>
-        <div class="form-group" id="grupoNombre">
-            <label for="id_nombre">Nombre:</label>
-            <input type="text" id="id_nombre" name="Nombre" required>
-        </div>
-        <div class="form-group" id="grupoFoto">
-            <label for="id_foto">Foto:</label>
-            <input type="file" id="id_foto" name="foto" accept="image/*" required>
-        </div>
-        <div class="form-group" id="grupoBoton">
-            <button type="submit" id="botonGuardar">Guardar</button>
-        </div>
-    </form>
-    
+    <div class="container" id="Fondoform">
+        <h1 id="formTitulo">Agregar Productos</h1>
+        <form action="{% url 'btnAgregarPlantas' %}" method="post" enctype="multipart/form-data" id="formAgregarProducto">
+            {% csrf_token %}
+            <div class="form-group" id="grupoPrecio">
+                <label for="id_precio">Precio:</label>
+                <input type="number" id="id_precio" name="precio" required>
+            </div>
+            <div class="form-group" id="grupoNombre">
+                <label for="id_nombre">Nombre:</label>
+                <input type="text" id="id_nombre" name="Nombre" required>
+            </div>
+            <div class="form-group" id="grupoFoto">
+                <label for="id_foto">Foto:</label>
+                <input type="file" id="id_foto" name="foto" accept="image/*" required>
+            </div>
+            <div class="form-group" id="grupoBoton">
+                <button type="submit" id="botonGuardar">Guardar</button>
+            </div>
+        </form>
+    </div>
 </div>
     {% endblock %}
 

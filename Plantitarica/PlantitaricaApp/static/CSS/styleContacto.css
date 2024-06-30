@@ -1,32 +1,39 @@
-
-
-
-
-/* Estilo para el título del formulario */
-#formTitulo {
-    font-size: 28px;
-    color: #2c3e50;
-    margin-bottom: 20px;
+/* Estilo para el contenedor de la página de contacto */
+#contactContainer {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
     text-align: center;
 }
 
-/* Estilo para el formulario */
-#formAgregarProducto {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #ecf0f1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo para cada grupo de formulario */
-#formAgregarProducto .form-group {
+/* Estilo para el título de la página de contacto */
+#contactTitulo {
+    font-size: 32px;
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 
+/* Estilo para el formulario de contacto */
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilo para cada grupo de formulario */
+#contactForm .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group-btn{
+    text-align: center;
+}
+
 /* Estilo para las etiquetas */
-#formAgregarProducto label {
+#contactForm label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
@@ -34,9 +41,9 @@
 }
 
 /* Estilo para los campos de entrada */
-#formAgregarProducto input[type="number"],
-#formAgregarProducto input[type="text"],
-#formAgregarProducto input[type="file"] {
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
     width: 100%;
     padding: 12px;
     border: 2px solid #bdc3c7;
@@ -46,18 +53,15 @@
     transition: border-color 0.3s ease;
 }
 
-#formAgregarProducto input[type="number"]:focus,
-#formAgregarProducto input[type="text"]:focus,
-#formAgregarProducto input[type="file"]:focus {
+/* Estilo para los campos de entrada al recibir foco */
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
     border-color: #3498db;
 }
 
-/* Estilo para el botón de guardar */
-#grupoBoton {
-    text-align: center;
-}
-
-#botonGuardar {
+/* Estilo para el botón de enviar */
+#contactForm #botonEnviar {
     background-color: #e74c3c;
     color: #fff;
     border: none;
@@ -69,12 +73,12 @@
 }
 
 /* Estilo para el botón al pasar el cursor por encima */
-#botonGuardar:hover {
+#contactForm #botonEnviar:hover {
     background-color: #c0392b;
 }
 
 /* Estilo para el botón al hacer clic */
-#botonGuardar:active {
+#contactForm #botonEnviar:active {
     background-color: #a93226;
     transform: scale(0.95);
 }
