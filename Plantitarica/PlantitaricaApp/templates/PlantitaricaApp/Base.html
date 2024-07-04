@@ -22,12 +22,21 @@
         {% for item in EnCarro %}
         <form method="post" action="{% url 'eliminarEncarro' item.nombre %}" onsubmit="setAction(this)" id="formCarro{{ forloop.counter }}">
             {% csrf_token %}
-            <p class="itemDetalle">Nombre: {{item.nombre}} <br> Precio: {{item.precio}}</p>
+            <p class="itemDetalle">Nombre: {{item.nombre}}<br> Cantidad: {{item.cantidad}} <br> Precio: {{item.precio}}
+            
+        </p>
+
             <input type="hidden" name="pagina_destino" id="pagina_destino">
             <button type="submit" class="eliminarBoton" onclick="mostrarCarro()">X</button>
         </form>
+        
         {% empty %}
         {% endfor %}
+        <div class="total">
+            
+            <h2>Total: ${{ Total }}</h2>
+            
+        </div>
     </div>
     
     <div class="container">

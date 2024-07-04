@@ -53,4 +53,5 @@ class EnCarro(models.Model):
     tipo = models.CharField(max_length=100)
     nombre = models.CharField(max_length=100)
     precio     = models.IntegerField(blank=False, null=False)
+    cantidad = models.IntegerField(blank=True, null=True)
 
