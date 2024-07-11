@@ -43,9 +43,12 @@
         {% block content %}
         {% endblock %}
     </div>
-    <img src="{% static 'IMG/logo.jpg' %}" alt="logo" id="logo">
-    <nav class="nav">        
+    
+    <nav class="nav">    
+        <img src="{% static 'IMG/logo.jpg' %}" alt="logo" id="logo">   
         <ul>
+            
+
             <li class="{% if request.resolver_match.url_name == 'inicio' %}active{% endif %}">
                 <a href="{% url 'inicio' %}" onclick="ocultarCarro()">Inicio</a>
             </li>
