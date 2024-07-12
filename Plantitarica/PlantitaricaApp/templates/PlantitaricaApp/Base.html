@@ -43,7 +43,39 @@
         {% block content %}
         {% endblock %}
     </div>
-    
+    <div class="menu-lateral">
+        <div class="menu-l-int" onclick="alternarMenu()">
+            <div class="menu-boton">
+                ☰
+            </div>
+            <div id="menu">
+                <ul>
+                    
+
+                    <li class="{% if request.resolver_match.url_name == 'inicio' %}active{% endif %}">
+                        <a href="{% url 'inicio' %}" onclick="ocultarCarro()">
+                            <img src="{% static 'IMG/inicio.png' %}" alt="Inicio" class="imaicon">
+                        </a>
+                    </li>
+                    <li class="{% if request.resolver_match.url_name == 'Productos' %}active{% endif %}">
+                        <a href="{% url 'Productos' %}" onclick="ocultarCarro()">
+                            <img src="{% static 'IMG/productos.png' %}" alt="Inicio" class="imaicon">
+                        </a>
+                    </li>
+                    <li class="{% if request.resolver_match.url_name == 'AcercaDe' %}active{% endif %}">
+                        <a href="{% url 'AcercaDe' %}" onclick="ocultarCarro()">
+                            <img src="{% static 'IMG/acercade.png' %}" alt="Inicio" class="imaicon">
+                        </a>
+                    </li>
+                    <li class="{% if request.resolver_match.url_name == 'Contacto' %}active{% endif %}">
+                        <a href="{% url 'Contacto' %}" onclick="ocultarCarro()">
+                            <img src="{% static 'IMG/contacto.png' %}" alt="Inicio" class="imaicon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <nav class="nav">    
         <img src="{% static 'IMG/logo.jpg' %}" alt="logo" id="logo">   
         <ul>

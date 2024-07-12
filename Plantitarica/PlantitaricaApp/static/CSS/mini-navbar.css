@@ -43,6 +43,18 @@
     color: #54ad58;
 }
 
-body {
-    padding-top: 50px;
-}
+
+@media (max-width: 600px) {
+    body{
+        padding-top: 0;
+    }
+    #agregar_plantas{
+        display: none;
+    }
+    #agregar_maceteros{
+        display: none;
+    }
+    #agregar_insumos{
+        display: none;
+    }
+  }

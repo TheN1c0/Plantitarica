@@ -23,13 +23,13 @@ body {
     height: 50%;
     top: 25%;
     flex: 1;
-    margin-left: 80px;
+    
     margin-bottom: -10%; 
     
 }
 
 .text h1 {
-    font-size: 45px;
+    font-size: 2.8rem;
     color: #F0EDCE;
 }
 
@@ -50,7 +50,7 @@ body {
     margin-right: 10%;
     position: relative;
     overflow: hidden; 
-    height: 550px;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -87,12 +87,11 @@ footer {
 #ContInicio1{
     background-color: #20433d;
     height: 100%;
+    /* cambios */
+    
 }
 
-.ContenedorMain{
-   
-   
-}
+
 
 #ContInicio2{
     position: absolute;
@@ -113,4 +112,13 @@ footer {
     padding: 2%;
     border-radius: 15px;
            
+}
+
+@media (max-width:600px) {
+    .slideshow-container{
+        display: none;
+    }
+    .text{
+        width: 100%;
+    }
 }

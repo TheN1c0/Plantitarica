@@ -22,6 +22,7 @@ body{
 }
 
 #foto2 {
+    flex: 1;
     width: 200px; 
     height: 60%; 
     top: 22%; 
@@ -34,6 +35,7 @@ body{
 #foto1 {
     width: 200px; 
     height: 60%; 
+    flex: 1;
 
     top: 22%; 
     right: 10%;
@@ -42,6 +44,8 @@ body{
     border-radius: 10px;
 }
 .text{
+    flex: 1;
+
     background-color: rgba(255, 255, 255, 0.7);
     max-width: 600px;
     height: 70%;
@@ -52,6 +56,7 @@ body{
     margin-bottom: 5%;
     border-radius: 10px;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
 .text h1{
     font-size: 30px;    
@@ -62,15 +67,20 @@ body{
     font-size: medium;
     color: green;
     font-weight: bold;
-
+    
 }
 .text span {
     font-size: 30px;
     color: #0E130C;
+    
 }
 .text p{
     color: #0E130C;
     font-weight: normal;
+    font-size: 1rem;
+    
+    
+    
 }
 footer {
     text-align: center;
@@ -83,3 +93,22 @@ footer {
     bottom: 0; 
     z-index: 999; 
   }
+
+  @media (max-width:1300px){
+    .contenedor-padre{
+        width: 80%;
+    }
+    #foto1{
+        display: none;
+    }
+    #foto2{
+        display: none;
+    }
+  }
+  
+  @media (max-width:550px){
+    .contenedor-padre{
+        width: 90%;
+  }
+  }
+  

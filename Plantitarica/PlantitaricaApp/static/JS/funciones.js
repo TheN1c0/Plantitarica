@@ -40,3 +40,11 @@ function ocultarCarro() {
     }
 }
 
+function alternarMenu() {
+    var elemento = document.getElementById('menu');
+    if (elemento.style.display === 'none' || elemento.style.display === '') {
+        elemento.style.display = 'block'; 
+    } else {
+        elemento.style.display = 'none';
+    }
+}
